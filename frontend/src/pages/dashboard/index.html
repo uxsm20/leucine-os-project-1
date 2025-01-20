@@ -1,0 +1,394 @@
+<div class="min-h-screen bg-gray-100" x-data="{ sidebarOpen: true }">
+    <!-- Sidebar -->
+    <div class="fixed inset-y-0 left-0 w-64 bg-indigo-700 text-white transition-transform duration-200 ease-in-out" :class="{ '-translate-x-full': !sidebarOpen }">
+        <div class="p-6">
+            <h1 class="text-2xl font-bold">LeucineOS</h1>
+        </div>
+        <nav class="mt-6">
+            <div class="px-4 py-2">
+                <h2 class="text-xs uppercase tracking-wide text-indigo-200">Core Products</h2>
+            </div>
+            <div class="space-y-1">
+                <!-- Navigation Items -->
+                <a href="#aps" class="flex items-center px-6 py-3 text-white hover:bg-indigo-600">
+                    <svg class="h-5 w-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                    </svg>
+                    <span>APS</span>
+                </a>
+                <a href="#task-execution" class="flex items-center px-6 py-3 text-white hover:bg-indigo-600">
+                    <svg class="h-5 w-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                    </svg>
+                    <span>Task Execution</span>
+                </a>
+                <a href="#quality" class="flex items-center px-6 py-3 text-white hover:bg-indigo-600">
+                    <svg class="h-5 w-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Quality Management</span>
+                </a>
+                <a href="#maintenance" class="flex items-center px-6 py-3 text-white hover:bg-indigo-600">
+                    <svg class="h-5 w-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>Maintenance</span>
+                </a>
+                <a href="#metrics" class="flex items-center px-6 py-3 text-white hover:bg-indigo-600">
+                    <svg class="h-5 w-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2h2v4l.586-.586z"/>
+                    </svg>
+                    <span>Performance Metrics</span>
+                </a>
+                <a href="#gamification" class="flex items-center px-6 py-3 text-white hover:bg-indigo-600">
+                    <svg class="h-5 w-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Operator Empowerment</span>
+                </a>
+                <a href="#traceability" class="flex items-center px-6 py-3 text-white hover:bg-indigo-600">
+                    <svg class="h-5 w-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                    </svg>
+                    <span>Traceability</span>
+                </a>
+                <a href="#collaboration" class="flex items-center px-6 py-3 text-white hover:bg-indigo-600">
+                    <svg class="h-5 w-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                    </svg>
+                    <span>Collaboration</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="pl-64 flex flex-col flex-1" :class="{ 'pl-0': !sidebarOpen }">
+        <!-- Top Navigation -->
+        <div class="sticky top-0 z-10 bg-white shadow-sm">
+            <div class="flex items-center justify-between h-16 px-4">
+                <button @click="sidebarOpen = !sidebarOpen" class="text-gray-500 hover:text-gray-600">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                <div class="flex items-center">
+                    <button onclick="handleLogout()" class="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 overflow-y-auto bg-gray-100">
+            <div class="py-6">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                    <h1 class="text-2xl font-semibold text-gray-900">Welcome to LeucineOS</h1>
+                    <p class="mt-2 text-sm text-gray-600">Your comprehensive manufacturing execution system</p>
+                </div>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+                    <div class="py-4">
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
+                            <!-- APS Card -->
+                            <div class="bg-white overflow-hidden shadow-sm rounded-lg" x-data="{ expanded: false }">
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between cursor-pointer" @click="expanded = !expanded">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                                                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2h2v4l.586-.586z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="ml-4">
+                                                <h2 class="text-lg font-medium text-gray-900">Advanced Planning and Scheduling</h2>
+                                                <p class="text-sm text-gray-500">Optimize production scheduling</p>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <svg class="h-5 w-5 text-gray-500 transition-transform" :class="{ 'rotate-180': expanded }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div x-show="expanded" x-collapse class="mt-4">
+                                        <div class="border-t pt-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="text-sm font-medium text-gray-500">Active Orders</span>
+                                                <span class="text-sm font-semibold text-gray-900">24</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-sm font-medium text-gray-500">Schedule Efficiency</span>
+                                                <span class="text-sm font-semibold text-green-600">95%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Task Execution Card -->
+                            <div class="bg-white overflow-hidden shadow-sm rounded-lg" x-data="{ expanded: false }">
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between cursor-pointer" @click="expanded = !expanded">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                                                </svg>
+                                            </div>
+                                            <div class="ml-4">
+                                                <h2 class="text-lg font-medium text-gray-900">Real-Time Task Execution</h2>
+                                                <p class="text-sm text-gray-500">Monitor ongoing operations</p>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <svg class="h-5 w-5 text-gray-500 transition-transform" :class="{ 'rotate-180': expanded }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div x-show="expanded" x-collapse class="mt-4">
+                                        <div class="border-t pt-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="text-sm font-medium text-gray-500">Active Tasks</span>
+                                                <span class="text-sm font-semibold text-gray-900">12</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-sm font-medium text-gray-500">Completion Rate</span>
+                                                <span class="text-sm font-semibold text-green-600">88%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quality Management Card -->
+                            <div class="bg-white overflow-hidden shadow-sm rounded-lg" x-data="{ expanded: false }">
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between cursor-pointer" @click="expanded = !expanded">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 bg-green-500 rounded-md p-3">
+                                                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="ml-4">
+                                                <h2 class="text-lg font-medium text-gray-900">Quality Management</h2>
+                                                <p class="text-sm text-gray-500">Ensure compliance standards</p>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <svg class="h-5 w-5 text-gray-500 transition-transform" :class="{ 'rotate-180': expanded }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div x-show="expanded" x-collapse class="mt-4">
+                                        <div class="border-t pt-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="text-sm font-medium text-gray-500">Quality Score</span>
+                                                <span class="text-sm font-semibold text-green-600">98%</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-sm font-medium text-gray-500">Open Issues</span>
+                                                <span class="text-sm font-semibold text-gray-900">3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Maintenance Card -->
+                            <div class="bg-white overflow-hidden shadow-sm rounded-lg" x-data="{ expanded: false }">
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between cursor-pointer" @click="expanded = !expanded">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 bg-yellow-500 rounded-md p-3">
+                                                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="ml-4">
+                                                <h2 class="text-lg font-medium text-gray-900">Maintenance Management</h2>
+                                                <p class="text-sm text-gray-500">Equipment health tracking</p>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <svg class="h-5 w-5 text-gray-500 transition-transform" :class="{ 'rotate-180': expanded }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div x-show="expanded" x-collapse class="mt-4">
+                                        <div class="border-t pt-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="text-sm font-medium text-gray-500">Equipment Status</span>
+                                                <span class="text-sm font-semibold text-green-600">Operational</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-sm font-medium text-gray-500">Next Maintenance</span>
+                                                <span class="text-sm font-semibold text-gray-900">48h</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Performance Metrics Card -->
+                            <div class="bg-white overflow-hidden shadow-sm rounded-lg" x-data="{ expanded: false }">
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between cursor-pointer" @click="expanded = !expanded">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 bg-purple-500 rounded-md p-3">
+                                                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2h2v4l.586-.586z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="ml-4">
+                                                <h2 class="text-lg font-medium text-gray-900">Performance Metrics</h2>
+                                                <p class="text-sm text-gray-500">Real-time analytics</p>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <svg class="h-5 w-5 text-gray-500 transition-transform" :class="{ 'rotate-180': expanded }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div x-show="expanded" x-collapse class="mt-4">
+                                        <div class="border-t pt-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="text-sm font-medium text-gray-500">OEE Score</span>
+                                                <span class="text-sm font-semibold text-green-600">92%</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-sm font-medium text-gray-500">Productivity</span>
+                                                <span class="text-sm font-semibold text-gray-900">↑ 5%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Operator Empowerment Card -->
+                            <div class="bg-white overflow-hidden shadow-sm rounded-lg" x-data="{ expanded: false }">
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between cursor-pointer" @click="expanded = !expanded">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 bg-pink-500 rounded-md p-3">
+                                                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="ml-4">
+                                                <h2 class="text-lg font-medium text-gray-900">Operator Empowerment</h2>
+                                                <p class="text-sm text-gray-500">Gamification & training</p>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <svg class="h-5 w-5 text-gray-500 transition-transform" :class="{ 'rotate-180': expanded }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div x-show="expanded" x-collapse class="mt-4">
+                                        <div class="border-t pt-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="text-sm font-medium text-gray-500">Active Operators</span>
+                                                <span class="text-sm font-semibold text-gray-900">15</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-sm font-medium text-gray-500">Training Progress</span>
+                                                <span class="text-sm font-semibold text-green-600">85%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Traceability Card -->
+                            <div class="bg-white overflow-hidden shadow-sm rounded-lg" x-data="{ expanded: false }">
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between cursor-pointer" @click="expanded = !expanded">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 bg-teal-500 rounded-md p-3">
+                                                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                                                </svg>
+                                            </div>
+                                            <div class="ml-4">
+                                                <h2 class="text-lg font-medium text-gray-900">Traceability</h2>
+                                                <p class="text-sm text-gray-500">Audit trail management</p>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <svg class="h-5 w-5 text-gray-500 transition-transform" :class="{ 'rotate-180': expanded }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div x-show="expanded" x-collapse class="mt-4">
+                                        <div class="border-t pt-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="text-sm font-medium text-gray-500">Tracked Items</span>
+                                                <span class="text-sm font-semibold text-gray-900">1,234</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-sm font-medium text-gray-500">Compliance Rate</span>
+                                                <span class="text-sm font-semibold text-green-600">100%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Collaboration Card -->
+                            <div class="bg-white overflow-hidden shadow-sm rounded-lg" x-data="{ expanded: false }">
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between cursor-pointer" @click="expanded = !expanded">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 bg-orange-500 rounded-md p-3">
+                                                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="ml-4">
+                                                <h2 class="text-lg font-medium text-gray-900">Collaboration</h2>
+                                                <p class="text-sm text-gray-500">Team communication</p>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <svg class="h-5 w-5 text-gray-500 transition-transform" :class="{ 'rotate-180': expanded }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div x-show="expanded" x-collapse class="mt-4">
+                                        <div class="border-t pt-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="text-sm font-medium text-gray-500">Active Chats</span>
+                                                <span class="text-sm font-semibold text-gray-900">8</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-sm font-medium text-gray-500">Response Time</span>
+                                                <span class="text-sm font-semibold text-green-600">under 5 min</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<script>
+function handleLogout() {
+    localStorage.removeItem('authenticated');
+    window.location.href = '/landing';
+}
+</script>

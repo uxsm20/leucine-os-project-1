@@ -34,13 +34,8 @@ const router = {
                     break
                     
                 case '/login':
-                    // Load login page (to be implemented)
-                    mainContent.innerHTML = '<h1>Login Page Coming Soon</h1>'
-                    break
-                    
-                case '/signup':
-                    // Load signup page (to be implemented)
-                    mainContent.innerHTML = '<h1>Signup Page Coming Soon</h1>'
+                    const loginContent = await fetch('/pages/login/index.html')
+                    mainContent.innerHTML = await loginContent.text()
                     break
                     
                 case '/dashboard':
@@ -49,7 +44,8 @@ const router = {
                         window.location.href = '/login'
                         return
                     }
-                    mainContent.innerHTML = '<h1>Dashboard Coming Soon</h1>'
+                    const dashboardContent = await fetch('/pages/dashboard/index.html')
+                    mainContent.innerHTML = await dashboardContent.text()
                     break
                     
                 default:

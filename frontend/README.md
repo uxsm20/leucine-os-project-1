@@ -13,21 +13,28 @@ frontend/
 │       └── logos/
 └── src/
     ├── components/
-    │   ├── common/
     │   ├── layout/
-    │   └── modules/
+    │   │   ├── Layout.jsx
+    │   │   ├── Sidebar.jsx
+    │   │   └── Topbar.jsx
+    │   ├── DashboardCard.jsx
+    │   └── DashboardGrid.jsx
     ├── pages/
-    │   └── landing/
+    │   ├── landing/
+    │   ├── Dashboard.jsx
+    │   └── aps/
+    │       └── index.jsx
     ├── services/
     ├── utils/
-    ├── store/
     └── styles/
 ```
 
 ## Technology Stack
-- HTML5 for structure
+- React 18 for UI components
 - TailwindCSS for styling
-- Alpine.js for interactivity
+- HeadlessUI for accessible components
+- React Router for navigation
+- Heroicons for iconography
 - Vite for development and building
 
 ## Getting Started
@@ -52,6 +59,7 @@ Run the development server:
 ```bash
 npm run dev
 ```
+The application will be available at http://localhost:5175
 
 ### Building for Production
 Build the application:
@@ -60,12 +68,33 @@ npm run build
 ```
 
 ## Features
-- Responsive design
-- Modern UI components
+- Modern React-based architecture
+- Responsive layout with sidebar navigation
+- Dashboard with module cards and metrics
+- Advanced Planning & Scheduling (APS) module with:
+  - Real-time metrics display
+  - Planning & Scheduling overview
+  - Optimization metrics
+  - Execution tracking
 - Performance optimized
 - Accessibility compliant
 
 ## Current Status
-- Basic project structure implemented
-- Landing page with responsive navigation
+- Modern React architecture implemented
+- Dashboard with navigation to modules
+- APS module with metrics and KPIs
+- Responsive layout with sidebar and topbar
 - Development environment configured
+
+## Next Steps
+- Implement remaining modules:
+  - Real-Time Task Execution
+  - Quality Management
+  - Maintenance Management
+  - Performance Metrics
+  - Operator Empowerment
+  - Traceability
+  - Collaboration
+- Add authentication
+- Connect with backend API
+- Implement testing
